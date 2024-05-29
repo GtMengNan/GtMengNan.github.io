@@ -99,7 +99,8 @@
 赤口：寓意口舌是非，容易遇到小人，尤其不利于谈事情<br>
 小吉：寓意吉祥如意，事情顺利<br>
 空亡：寓意诸事不顺，会有坏的结果，及时止损</p>
-
+<button onclick="getResult()">计算本次运势</button>
+<p id="happy">   </p>
               </div>
               <div class="toc-container">
                 <ul class="markdownIt-TOC">
@@ -143,6 +144,30 @@
     </div>
 
     <script>
+       const getResult=() => {
+      var min = 1; // 最小值
+    var max = 6; // 最大值
+    var randomNumbers = [];
+    var text = "";
+   for (var i = 0; i < 3; i++) {
+        var randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+        randomNumbers.push(randomNumber);
+    }
+     var texts = ["大安","流连","速喜","赤口","小吉","空亡"];
+   
+    var resTexts = [];
+      var pos = 0;
+        for (var i = 0; i < 3; i++) {
+          pos +=  randomNumbers[i]-1;
+          resTexts.push(texts[pos % texts.length]);
+          text += texts[pos % texts.length];
+            text += " ";
+        }
+  
+
+          var textLab = document.getElementById("happy");
+          textLab.innerHTML = text;
+     }
       hljs.initHighlightingOnLoad()
 
       let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
