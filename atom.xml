@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://GtMengNan.github.io</id>
+    <title>GtMengNan</title>
+    <updated>2024-05-29T16:05:53.938Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://GtMengNan.github.io"/>
+    <link rel="self" href="https://GtMengNan.github.io/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://GtMengNan.github.io/images/avatar.png</logo>
+    <icon>https://GtMengNan.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2024, GtMengNan</rights>
+    <entry>
+        <title type="html"><![CDATA[小六壬计算运势]]></title>
+        <id>https://GtMengNan.github.io/post/xiao-liu-ren-ji-suan-yun-shi/</id>
+        <link href="https://GtMengNan.github.io/post/xiao-liu-ren-ji-suan-yun-shi/">
+        </link>
+        <updated>2024-05-29T03:41:22.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="起卦注意事项">起卦注意事项：</h2>
+<h3 id="遇事即刻起卦凡事只占一次无事勿占">遇事即刻起卦,凡事只占一次,无事勿占</h3>
+<p>大安：健康平安，事情发展顺利，心想事成<br>
+流连：流连忘返，事情不顺利，不会有结果，要等的人也不会来，此时不宜轻举妄动，<br>
+速喜：寓意很快会有喜讯传来，会有好结果<br>
+赤口：寓意口舌是非，容易遇到小人，尤其不利于谈事情<br>
+小吉：寓意吉祥如意，事情顺利<br>
+空亡：寓意诸事不顺，会有坏的结果，及时止损</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CMake常用指令]]></title>
+        <id>https://GtMengNan.github.io/post/cmake-chang-yong-zhi-ling/</id>
+        <link href="https://GtMengNan.github.io/post/cmake-chang-yong-zhi-ling/">
+        </link>
+        <updated>2023-07-24T01:19:25.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<h1 id="1指定安装路径">1.指定安装路径</h1>
+<pre><code>-DCMAKE_INSTALL_PREFIX:PATH=/path/to/install
+</code></pre>
+<h1 id="2添加包路径">2.添加包路径</h1>
+<pre><code>export PKG_CONFIG_PATH=/root/workProject/hardware-3rd-linux-x86/libusb/:$PKG_CONFIG_PATH    
+#注意该路径需要有 libusb.pc文件
+</code></pre>
+<h1 id="3添加c-fpic参数">3.添加c++ FPIC参数</h1>
+<pre><code>-DCMAKE_POSITION_INDEPENDENT_CODE=ON
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[校验码]]></title>
+        <id>https://GtMengNan.github.io/post/xiao-yan-ma/</id>
+        <link href="https://GtMengNan.github.io/post/xiao-yan-ma/">
+        </link>
+        <updated>2023-07-12T12:17:51.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="奇偶校验">奇偶校验</h2>
+<ul>
+<li>码距 :码字之间最少变化的二进制位数称为码距</li>
+<li>特点：只能检测出奇数个数据出错，无法纠正错误</li>
+</ul>
+<h2 id="crc循环冗余校验码">CRC循环冗余校验码</h2>
+<ul>
+<li>CRC校验，可检错，不可纠错</li>
+<li>采用模2运算来构造校验位</li>
+</ul>
+<h2 id="海明校验码">海明校验码</h2>
+<ul>
+<li>可检错，也可纠错</li>
+<li>缺点：计算复杂</li>
+<li>校验位的数量公式：<br>
+<img src="https://GtMengNan.github.io/post-images/1689165228920.png" alt="" loading="lazy"></li>
+</ul>
+<h2 id="总结">总结</h2>
+<figure data-type="image" tabindex="1"><img src="https://GtMengNan.github.io/post-images/1689165270690.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[jsoncpp-src-0.5.0编译记录]]></title>
+        <id>https://GtMengNan.github.io/post/jsoncpp-src-050-bian-yi-ji-lu/</id>
+        <link href="https://GtMengNan.github.io/post/jsoncpp-src-050-bian-yi-ji-lu/">
+        </link>
+        <updated>2023-06-28T01:14:56.000Z</updated>
+        <content type="html"><![CDATA[<p>1.安装python<br>
+2.安装Jsoncpp的编译辅助工具cons http://sourceforge.net/projects/scons/files/scons/2.1.0/scons-2.1.0.tar.gz/download</p>
+<pre><code class="language-shell">解压tar -zvxf scons-2.1.0.tar.gz
+
+cd到解压目录下，终端输入命令  sudo python setup.py install
+
+接着解压jsoncpp-src-0.5.0.tar.gz ：tar -zvxf jsoncpp-src-0.5.0.tar.gz
+
+cd到解压目录下，输入命令 sudo scons platform=linux-gcc
+
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[curl-7.38.0 编译记录]]></title>
+        <id>https://GtMengNan.github.io/post/curl-7380-bian-yi-ji-lu/</id>
+        <link href="https://GtMengNan.github.io/post/curl-7380-bian-yi-ji-lu/">
+        </link>
+        <updated>2023-06-28T01:14:23.000Z</updated>
+        <content type="html"><![CDATA[<pre><code class="language-shell">./configure --prefix=/home/keytop/workSpace/3rd/curl-7.38.0
+make 
+make install
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[boost1.66.0编译记录]]></title>
+        <id>https://GtMengNan.github.io/post/boost1660-bian-yi-ji-lu/</id>
+        <link href="https://GtMengNan.github.io/post/boost1660-bian-yi-ji-lu/">
+        </link>
+        <updated>2023-06-28T01:13:31.000Z</updated>
+        <content type="html"><![CDATA[<pre><code class="language-shell">./bootstrap.sh --with-libraries=all --with-toolset=gcc link=static runtime-link=static
+./b2 toolset=gcc
+./b2 install --prefix=/home/keytop/workSpace/3rd/boost_1_66_0
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[数据的表示]]></title>
+        <id>https://GtMengNan.github.io/post/ji-suan-ji-zu-cheng-yu-ti-xi-jie-gou/</id>
+        <link href="https://GtMengNan.github.io/post/ji-suan-ji-zu-cheng-yu-ti-xi-jie-gou/">
+        </link>
+        <updated>2023-06-27T14:23:41.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="1数据的表示">1.数据的表示</h1>
+<p>十进制(D)<br>
+二进制(B)<br>
+十六进制(H)</p>
+<h1 id="2进制转换">2.进制转换</h1>
+<h2 id="其他进制转10进制加权法按权展开法">其他进制转10进制（加权法/按权展开法）</h2>
+<p>把每一位数和当前位的权值相乘后的结果累加起来</p>
+<h2 id="十进制转其他进制-短除法除基取余法">十进制转其他进制 （短除法/除基取余法）</h2>
+<p>循环除基直到商为0，从下往上取余数</p>
+<h2 id="十进制转二进制-凑位权法">十进制转二进制 （凑位权法）</h2>
+<p>用减法减权值取权重<br>
+128 64 32 16 8 4 2 1</p>
+<h2 id="二进制转八进制与十六进制-分组法逆分组法">二进制转八进制与十六进制 （分组法/逆分组法）</h2>
+<p>将二进制的拆分为相应进制的值<br>
+<img src="https://GtMengNan.github.io/post-images/1687877897728.png" alt="" loading="lazy"></p>
+<h1 id="3码制原码反码补码移码">3.码制（原码/反码/补码/移码）</h1>
+<figure data-type="image" tabindex="1"><img src="https://GtMengNan.github.io/post-images/1687878469348.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[欢迎来到我的博客]]></title>
+        <id>https://GtMengNan.github.io/post/huan-ying-lai-dao-wo-de-bo-ke/</id>
+        <link href="https://GtMengNan.github.io/post/huan-ying-lai-dao-wo-de-bo-ke/">
+        </link>
+        <updated>2023-06-27T14:18:53.000Z</updated>
+        <summary type="html"><![CDATA[<p>记录点滴知识</p>
+<h1 id="欢迎">欢迎</h1>
+]]></summary>
+        <content type="html"><![CDATA[<p>记录点滴知识</p>
+<h1 id="欢迎">欢迎</h1>
+<!-- more -->
+]]></content>
+    </entry>
+</feed>

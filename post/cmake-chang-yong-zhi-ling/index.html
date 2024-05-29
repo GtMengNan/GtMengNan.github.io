@@ -1,0 +1,183 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CMake常用指令 | GtMengNan</title>
+<link rel="shortcut icon" href="https://GtMengNan.github.io/favicon.ico?v=1716998750189">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://GtMengNan.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="CMake常用指令 | GtMengNan - Atom Feed" href="https://GtMengNan.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="
+1.指定安装路径
+-DCMAKE_INSTALL_PREFIX:PATH=/path/to/install
+
+2.添加包路径
+export PKG_CONFIG_PATH=/root/workProject/hardware-3rd-li..." />
+    <meta name="keywords" content="CMake" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://GtMengNan.github.io">
+  <img class="avatar" src="https://GtMengNan.github.io/images/avatar.png?v=1716998750189" alt="">
+  </a>
+  <h1 class="site-title">
+    GtMengNan
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              CMake常用指令
+            </h2>
+            <div class="post-info">
+              <span>
+                2023-07-24
+              </span>
+              <span>
+                1 min read
+              </span>
+              
+                <a href="https://GtMengNan.github.io/tag/TXYGI0mpP/" class="post-tag">
+                  # CMake
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <!-- more -->
+<h1 id="1指定安装路径">1.指定安装路径</h1>
+<pre><code>-DCMAKE_INSTALL_PREFIX:PATH=/path/to/install
+</code></pre>
+<h1 id="2添加包路径">2.添加包路径</h1>
+<pre><code>export PKG_CONFIG_PATH=/root/workProject/hardware-3rd-linux-x86/libusb/:$PKG_CONFIG_PATH    
+#注意该路径需要有 libusb.pc文件
+</code></pre>
+<h1 id="3添加c-fpic参数">3.添加c++ FPIC参数</h1>
+<pre><code>-DCMAKE_POSITION_INDEPENDENT_CODE=ON
+</code></pre>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#1%E6%8C%87%E5%AE%9A%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84">1.指定安装路径</a></li>
+<li><a href="#2%E6%B7%BB%E5%8A%A0%E5%8C%85%E8%B7%AF%E5%BE%84">2.添加包路径</a></li>
+<li><a href="#3%E6%B7%BB%E5%8A%A0c-fpic%E5%8F%82%E6%95%B0">3.添加c++ FPIC参数</a></li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://GtMengNan.github.io/post/xiao-yan-ma/">
+              <h3 class="post-title">
+                校验码
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://GtMengNan.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
